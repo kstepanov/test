@@ -3,5 +3,8 @@
 
     <string name="app_name">Test</string>
     <string name="logout">Log out</string>
+    
+    <string name="splash_title">CONTACTS</string>
+    <string name="splash_copyrights">&#169; Shakuro(TM) 2013</string>
 
 </resources>

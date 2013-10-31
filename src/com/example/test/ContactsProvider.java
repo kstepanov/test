@@ -33,12 +33,12 @@ public class ContactsProvider extends ContentProvider {
 	@Override
 	public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
 		return query(
-			uri,
-			projection,
-			selection,
-			selectionArgs,
-			sortOrder,
-			getContext().getResources().getInteger(R.integer.limit)
+			uri, 
+			projection, 
+			selection, 
+			selectionArgs, 
+			sortOrder, 
+			getContext().getResources().getInteger(R.integer.all_contacts)
 		);
 	}
 
@@ -48,7 +48,7 @@ public class ContactsProvider extends ContentProvider {
 			new String[] { Contacts._ID, Contacts.DISPLAY_NAME },
 			null,
 			null,
-			Contacts.DISPLAY_NAME + " LIMIT " + limit
+			Contacts.DISPLAY_NAME + (limit > 0 ? " LIMIT " + limit : "")
 		);
 
 		return c;

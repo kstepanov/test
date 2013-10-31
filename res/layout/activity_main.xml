@@ -1,10 +1,36 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    
     <ListView
         android:id="@+id/contacts"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    
+    <RelativeLayout
+        android:id="@+id/splashLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="40sp"
+            android:text="@string/splash_title"
+            android:layout_centerInParent="true"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:text="@string/splash_copyrights"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"/>
+        
+    </RelativeLayout>
 
 </RelativeLayout>
